@@ -25,7 +25,7 @@ Open up your mission file and add the init.sqf line to your init.sqf file (Must 
 Copy the Entire Custom folder into the root of your mission file!
 
 			
-			Next go to:
+			Next go to your mission file config.cpp:
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////				
 			
