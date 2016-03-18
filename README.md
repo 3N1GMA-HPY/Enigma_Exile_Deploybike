@@ -16,6 +16,9 @@ First add the startup paramaters @Enigma to your server!
 Copy the @Enigma Folder to your Server Root!
 
 
+An alternative method is to open the @Enigma\addons folder and transfer any file ending with .pbo into your @ExileServer\addons\ folder where it will be loaded up automatically.
+
+
 
 Open up your mission file and add the init.sqf line to your init.sqf file (Must be executed by both server and client!)!
 
