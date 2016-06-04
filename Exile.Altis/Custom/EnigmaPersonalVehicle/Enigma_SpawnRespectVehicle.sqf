@@ -19,7 +19,7 @@ if (player getvariable ["spawnedrspctveh", true]) then {
     titleText[format["Choose your vehicle:"],"PLAIN"];
 
 player addAction [ "Offroad (1 time gift)", { 
-ENIGMA_SpawnVehicleChk = [player,spawnPos,"I_G_Offroad_01_F",1,"",uid]; 
+ENIGMA_SpawnVehicleChk = [player,spawnPos,"Exile_Car_Offroad_Red",1,"",uid]; 
 publicVariableServer "ENIGMA_SpawnVehicleChk";
 removeAllActions player;
 player setvariable ["spawnedrspctveh", false, true];
@@ -48,7 +48,7 @@ if (player getvariable ["spawnedrspctveh", true]) then {
     titleText[format["Choose your vehicle:",_kassa],"PLAIN"];
 
 player addAction [ "Hatchback (1 time gift)", { 
-ENIGMA_SpawnVehicleChk = [player,spawnPos,"C_Hatchback_01_F",1,"",uid]; 
+ENIGMA_SpawnVehicleChk = [player,spawnPos,"Exile_Car_Hatchback_Green",1,"",uid]; 
 publicVariableServer "ENIGMA_SpawnVehicleChk";
 removeAllActions player;
 player setvariable ["spawnedrspctveh", false, true];
@@ -80,7 +80,7 @@ if (player getvariable ["spawnedrspctveh", true]) then {
 
 
 player addAction [ "Quadbike (1 time gift)", { 
-ENIGMA_SpawnVehicleChk = [player,spawnPos,"I_G_Quadbike_01_F",1,"",uid]; 
+ENIGMA_SpawnVehicleChk = [player,spawnPos,"Exile_Bike_QuadBike_Black",1,"",uid]; 
 publicVariableServer "ENIGMA_SpawnVehicleChk";
 removeAllActions player;
 player setvariable ["spawnedrspctveh", false, true];
