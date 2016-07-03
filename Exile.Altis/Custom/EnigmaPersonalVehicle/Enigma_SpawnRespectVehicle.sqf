@@ -11,22 +11,25 @@ if (RespectVehiclesEnabled) then {
 
 diag_log "executing spawnrespectvehicle!";
 
- if (ExileClientPlayerScore >= OffRoadRespect) then { 
+ if (ExileClientPlayerScore >= (RespectVehicle3 select 2)) then { 
 
 if (player getvariable ["spawnedrspctveh", true]) then {
 
     5 cutText ["","PLAIN"];
     titleText[format["Choose your vehicle:"],"PLAIN"];
 
-player addAction [ "Offroad (1 time gift)", { 
-ENIGMA_SpawnVehicleChk = [player,spawnPos,"Exile_Car_Offroad_Red",1,"",uid]; 
+
+
+
+player addAction [ format ["%1  (1 time gift)",RespectVehicle3 select 0], { 
+ENIGMA_SpawnVehicleChk = [player,spawnPos,(RespectVehicle3 select 1),1,"",uid]; 
 publicVariableServer "ENIGMA_SpawnVehicleChk";
 removeAllActions player;
 player setvariable ["spawnedrspctveh", false, true];
 } ];
 
 player addAction [ "Bike (Unlimited)", { 
-ENIGMA_SpawnVehicleChk = [player,spawnPos,"Exile_Bike_MountainBike",1,"",uid]; 
+ENIGMA_SpawnVehicleChk = [player,spawnPos,(DefaultVehicle select 1),1,"",uid]; 
 publicVariableServer "ENIGMA_SpawnVehicleChk";
 removeAllActions player;
 } ];
@@ -34,28 +37,28 @@ removeAllActions player;
 
 } else {
 
-ENIGMA_SpawnVehicleChk = [player,spawnPos,"Exile_Bike_MountainBike",1,"",uid]; 
+ENIGMA_SpawnVehicleChk = [player,spawnPos,(DefaultVehicle select 1),1,"",uid]; 
 publicVariableServer "ENIGMA_SpawnVehicleChk";
 };
 
 } else { 
 
-if (ExileClientPlayerScore >= HatchBackRespect) then { 
+if (ExileClientPlayerScore >= (RespectVehicle2 select 2)) then { 
 if (player getvariable ["spawnedrspctveh", true]) then {
 
 
     5 cutText ["","PLAIN"];
     titleText[format["Choose your vehicle:",_kassa],"PLAIN"];
 
-player addAction [ "Hatchback (1 time gift)", { 
-ENIGMA_SpawnVehicleChk = [player,spawnPos,"Exile_Car_Hatchback_Green",1,"",uid]; 
+player addAction [ format ["%1  (1 time gift)",RespectVehicle2 select 0], { 
+ENIGMA_SpawnVehicleChk = [player,spawnPos,(RespectVehicle2 select 1),1,"",uid]; 
 publicVariableServer "ENIGMA_SpawnVehicleChk";
 removeAllActions player;
 player setvariable ["spawnedrspctveh", false, true];
 } ];
 
 player addAction [ "Bike (Unlimited)", { 
-ENIGMA_SpawnVehicleChk = [player,spawnPos,"Exile_Bike_MountainBike",1,"",uid]; 
+ENIGMA_SpawnVehicleChk = [player,spawnPos,(DefaultVehicle select 1),1,"",uid]; 
 publicVariableServer "ENIGMA_SpawnVehicleChk";
 removeAllActions player;
 } ];
@@ -63,13 +66,13 @@ removeAllActions player;
 
 } else {
   
-ENIGMA_SpawnVehicleChk = [player,spawnPos,"Exile_Bike_MountainBike",1,"",uid]; 
+ENIGMA_SpawnVehicleChk = [player,spawnPos,(DefaultVehicle select 1),1,"",uid]; 
 publicVariableServer "ENIGMA_SpawnVehicleChk";
 
 };
 
 } else {
-if (ExileClientPlayerScore >= ATVRespect) then { 
+if (ExileClientPlayerScore >= (RespectVehicle1 select 2)) then { 
 
 
 if (player getvariable ["spawnedrspctveh", true]) then {
@@ -79,15 +82,15 @@ if (player getvariable ["spawnedrspctveh", true]) then {
     titleText[format["Choose your vehicle:",_kassa],"PLAIN"];
 
 
-player addAction [ "Quadbike (1 time gift)", { 
-ENIGMA_SpawnVehicleChk = [player,spawnPos,"Exile_Bike_QuadBike_Black",1,"",uid]; 
+player addAction [ format ["%1  (1 time gift)",RespectVehicle1 select 0], { 
+ENIGMA_SpawnVehicleChk = [player,spawnPos,(RespectVehicle1 select 1),1,"",uid]; 
 publicVariableServer "ENIGMA_SpawnVehicleChk";
 removeAllActions player;
 player setvariable ["spawnedrspctveh", false, true];
 } ];
 
 player addAction [ "Bike (Unlimited)", { 
-ENIGMA_SpawnVehicleChk = [player,spawnPos,"Exile_Bike_MountainBike",1,"",uid]; 
+ENIGMA_SpawnVehicleChk = [player,spawnPos,(DefaultVehicle select 1),1,"",uid]; 
 publicVariableServer "ENIGMA_SpawnVehicleChk";
 removeAllActions player;
 } ];
@@ -95,14 +98,14 @@ removeAllActions player;
 
 } else {
   
-ENIGMA_SpawnVehicleChk = [player,spawnPos,"Exile_Bike_MountainBike",1,"",uid]; 
+ENIGMA_SpawnVehicleChk = [player,spawnPos,(DefaultVehicle select 1),1,"",uid]; 
 publicVariableServer "ENIGMA_SpawnVehicleChk";
 
 };
 
 
 } else {
-ENIGMA_SpawnVehicleChk = [player,spawnPos,"Exile_Bike_MountainBike",1,"",uid]; 
+ENIGMA_SpawnVehicleChk = [player,spawnPos,(DefaultVehicle select 1),1,"",uid]; 
 publicVariableServer "ENIGMA_SpawnVehicleChk";
 
      		   };
@@ -111,7 +114,7 @@ publicVariableServer "ENIGMA_SpawnVehicleChk";
 
 } else {
 	
-ENIGMA_SpawnVehicleChk = [player,spawnPos,"Exile_Bike_MountainBike",1,"",uid]; 
+ENIGMA_SpawnVehicleChk = [player,spawnPos,(DefaultVehicle select 1),1,"",uid]; 
 publicVariableServer "ENIGMA_SpawnVehicleChk";
 
 };

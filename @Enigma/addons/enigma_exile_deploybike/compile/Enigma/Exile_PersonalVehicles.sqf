@@ -61,7 +61,7 @@ if ((_storedvehClassName == _enigma_vehClassName) && (_respectvehicleused == 1))
 };
         _respectvehicle = 1;
         _spawnnolongerallowed = 0;    
-        _vehObj = _enigma_vehClassName createVehicle _spawnPos;
+        _vehObj = _enigma_vehClassName createVehicle [(_spawnPos select 0) + 2, (_spawnPos select 1) + 2, _spawnPos select 2];
 
         PersonalVehicle_cache set [_ind, [_playerID, _vehObj, _spawnnolongerallowed, _enigma_vehClassName, _respectvehicle]]; 
 
