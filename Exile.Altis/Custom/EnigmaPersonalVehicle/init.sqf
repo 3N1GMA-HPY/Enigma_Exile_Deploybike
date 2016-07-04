@@ -12,7 +12,7 @@ RespectVehiclesEnabled = false; //if false only spawn bikes!
 EnigmaGetinVeh = true; //if true player is moved into vehicle on spawn
 
 
-DefaultVehicle = ["Bike","Exile_Bike_MountainBike"; //Note if you change this default vehicle here you must manually change it in the server pbo as well!
+DefaultVehicle = ["Bike","Exile_Bike_MountainBike"]; //Note if you change this default vehicle here you must manually change it in the server pbo as well!
 RespectVehicle1 = ["Quad","Exile_Bike_QuadBike_Black",10000];
 RespectVehicle2 = ["Hatchback","Exile_Car_Hatchback_Green",20000];
 RespectVehicle3 = ["Offroad","Exile_Car_Offroad_Red",30000];
@@ -54,7 +54,7 @@ if (!isDedicated) then {
    _PersonalVehicle = _packet select 0;
    _msg = _packet select 1;
 
-	 _PackupVehicleAction = _PersonalVehicle addaction [("<t color=""#00CF11"">" + ("Packup Vehicle") +"</t>"),"Custom\EnigmaPersonalVehicle\Enigma_PackupVehicle.sqf","",-97,false,false,"",""]; 
+   _PackupVehicleAction = _PersonalVehicle addaction [("<t color=""#00CF11"">" + ("Packup Vehicle") +"</t>"),"Custom\EnigmaPersonalVehicle\Enigma_PackupVehicle.sqf","",-97,false,false,"",""]; 
 
   _vehdir = [player,_PersonalVehicle] call BIS_fnc_dirTo;
   player setDir _vehdir;
@@ -110,7 +110,7 @@ if (!isDedicated) then {
   _distance = player distance _PersonalVehicle;
   _distance = round(_distance);
   systemChat Format ["You have already unpacked your vehicle! It is %1m away",_distance];
-	};
+  };
 
 
 
