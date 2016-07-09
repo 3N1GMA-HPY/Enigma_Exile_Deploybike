@@ -10,6 +10,7 @@ Exile_PersonalVehicles
 
 RespectVehiclesEnabled = false; //if false only spawn bikes!
 EnigmaGetinVeh = true; //if true player is moved into vehicle on spawn
+DisableinSafezone = true; //Disables spawning of respect vehicles in safezone
 
 
 DefaultVehicle = ["Bike","Exile_Bike_MountainBike"]; //Note if you change this default vehicle here you must manually change it in the server pbo as well!
@@ -125,10 +126,14 @@ Private ["_respectvehiclechk","_packet"];
 uid = getPlayerUID player;
 spawnPos = getposatl player;
 
+if (DisableinSafezone) then
+{
+  if (ExilePlayerInSafezone) exitWith {};
+};
 if !(_respectvehiclechk == 1) then { 
 execVM "Custom\EnigmaPersonalVehicle\Enigma_SpawnRespectVehicle.sqf"; 
 } else {
-ENIGMA_SpawnVehicleChk = [player,spawnPos,"Exile_Bike_MountainBike",1,"",uid]; 
+ENIGMA_SpawnVehicleChk = [player,spawnPos,(DefaultVehicle select 1),1,"",uid]; 
 publicVariableServer "ENIGMA_SpawnVehicleChk";
 
     };
